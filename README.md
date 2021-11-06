@@ -45,7 +45,7 @@ This setting used by [This Repository](https://github.com/sex-request/backend)
 ### Install
 
 ```sh
-npm ci && npm run postinstall
+npm ci && npm run postinstall && npm run fmt:install
 ```
 
 ### Test

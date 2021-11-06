@@ -1,0 +1,34 @@
+service: rust-serverless-lambda-template
+
+provider:
+  name: aws
+  runtime: rust
+  memorySize: 128
+  region: ap-northeast-2
+  stage: prod
+  lambdaHashingVersion: 20201221
+
+package:
+  individually: true
+
+plugins:
+  - serverless-rust
+
+custom:
+  rust:
+    dockerless: true
+
+functions:
+  index:
+    handler: index
+    events:
+      - http:
+          path: index
+          method: ANY
+
+  health:
+    handler: health
+    events:
+      - http:
+          path: health
+          method: GET

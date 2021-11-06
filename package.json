@@ -1,0 +1,19 @@
+{
+  "name": "rust-serverless-lambda-template",
+  "scripts": {
+    "test": "cargo test",
+    "fmt": "cargo fmt --all",
+    "fmt:check": "cargo fmt --all -- --check",
+    "fmt:install": "rustup component add rustfmt",
+    "deploy": "sls deploy",
+    "deploy:dev": "sls deploy --stage=dev",
+    "deploy:qa": "sls deploy --stage=qa",
+    "deploy:prod": "sls deploy --stage=prod",
+    "postinstall": "husky install"
+  },
+  "devDependencies": {
+    "husky": "^7.0.0",
+    "serverless": "^2.65.0",
+    "serverless-rust": "^0.3.8"
+  }
+}
